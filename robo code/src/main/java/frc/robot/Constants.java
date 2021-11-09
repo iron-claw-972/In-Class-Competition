@@ -6,17 +6,6 @@
 /*----------------------------------------------------------------------------*/
 
 package frc.robot;
-
-/**
- * The Constants class provides a convenient place to hold robot-wide numerical or boolean
- * constants.  This class should not be used for any other purpose.  All constants should be
- * declared globally (i.e. public static).  Do not put anything functional in this class.
- *
- * <p>It is advised to statically import this class (or one of its inner classes) wherever the
- * constants are needed, to reduce verbosity.
- */
-
-//TODO 1: make the ports accurate
 public final class Constants {
   public static final class DriveConstants {
 
@@ -27,5 +16,9 @@ public final class Constants {
 
     public static final int kLeftJoyAxis = 0;
     public static final int kRightJoyAxis = 0;
+  }
+
+  public static final class outtakeConstants {
+    //set up constants when we have motor numbers
   }
 }
