@@ -23,11 +23,11 @@ public class DriveSubsystem extends SubsystemBase {
   //TODO: 1. Set the motor to the right type (Talon, CAN, etc.).
   // See https://github.com/iron-claw-972/HowToProgramming for how to do this. 
   // Make sure to set the right amount of motors! (if you only have 2 motors don't make 4)
-
+  /*
   TalonSRX leftMotor1 = new TalonSRX(DriveConstants.kLeftMotor1Port);  
 
   TalonSRX rightMotor1 = new TalonSRX(DriveConstants.kRightMotor1Port);
-
+  */
   //how to set up sparkmaxes, if your robot has those
   // CANSparkMax leftMotor1 = new CANSparkMax(DriveConstants.kLeftMotor1Port, MotorType.kBrushless);
   // CANSparkMax leftMotor2 = new CANSparkMax(DriveConstants.kLeftMotor2Port, MotorType.kBrushless);
