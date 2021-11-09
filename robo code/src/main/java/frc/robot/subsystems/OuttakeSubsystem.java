@@ -16,16 +16,18 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-import frc.robot.Constants.DriveConstants;
+import frc.robot.Constants.OuttakeConstants;
 
 public class OuttakeSubsystem extends SubsystemBase {
-  //add motor variables when the robot is done
+  TalonSRX leftMotorSpinner = new TalonSRX(OuttakeConstants.kLeftMotorSpinnerPort);
+  TalonSRX rightMotorSpinner = new TalonSRX(OuttakeConstants.kRightMotorSpinnerPort);
 
   public OuttakeSubsystem() {
-    //if needed, set one of the motors to be inverted
+    leftMotorSpinner.setInverted(true);
   }
 
-  public void outtakeDrive(double throttle, double turn) {
-      //set up motors
+  public void outtakeDrive(double throttle) {
+    leftMotorSpinner.set(ControlMode.PercentOutput, throttle);
+    rightMotorSpinner.set(ControlMode.PercentOutput, throttle);
   }
 }
