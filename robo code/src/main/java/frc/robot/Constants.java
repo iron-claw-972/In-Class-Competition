@@ -20,8 +20,8 @@ public final class Constants {
 
   public static final class OuttakeConstants {
     //CHANGE PORTS
-    public static final int kLeftMotorSpinner1Port = 0;
-    public static final int kRightMotorSpinner1Port = 0;
+    public static final int kLeftMotorSpinnerPort = 0;
+    public static final int kRightMotorSpinnerPort = 0;
   }
 
   public static final class ButtonConstants {
