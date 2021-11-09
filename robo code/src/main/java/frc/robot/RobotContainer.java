@@ -46,15 +46,9 @@ public class RobotContainer {
     );
   }
 
-    /**
-   * Use this method to define your button->command mappings.  Buttons can be created by
-   * instantiating a {@link GenericHID} or one of its subclasses ({@link
-   * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a
-   * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
-   */
   private void configureButtonBindings() {
     JoystickButton aButton = new JoystickButton(controller, ButtonConstants.kA);
-    aButton.whenHeld(new ElevatorDrive(new ElevatorSubsystem()));
+    aButton.whenHeld(new OuttakeDrive(new OuttakeSubsystem()));
   }
 
   public static double getMotorSpeed(int port) {
