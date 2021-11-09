@@ -8,7 +8,7 @@
 package frc.robot;
 public final class Constants {
   public static final class DriveConstants {
-
+    //CHANGE PORTS
     public static final int kLeftMotor1Port = 0;
     public static final int kRightMotor1Port = 0;
 
@@ -18,7 +18,14 @@ public final class Constants {
     public static final int kRightJoyAxis = 0;
   }
 
-  public static final class outtakeConstants {
-    //set up constants when we have motor numbers
+  public static final class OuttakeConstants {
+    //CHANGE PORTS
+    public static final int kLeftMotorSpinner1Port = 0;
+    public static final int kRightMotorSpinner1Port = 0;
+  }
+
+  public static final class ButtonConstants {
+    //button A (1) is assigned to variable "kA"
+    public static final int kA = 1;
   }
 }
