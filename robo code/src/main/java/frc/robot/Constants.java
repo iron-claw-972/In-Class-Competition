@@ -9,8 +9,8 @@ package frc.robot;
 public final class Constants {
   public static final class DriveConstants {
     //CHANGE PORTS
-    public static final int kLeftMotor1Port = 0;
-    public static final int kRightMotor1Port = 0;
+    public static final int kLeftMotorPort = 0;
+    public static final int kRightMotorPort = 0;
 
     public static final int kControllerPort = 0;
 
