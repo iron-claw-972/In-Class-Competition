@@ -19,7 +19,6 @@ public class OuttakeDrive extends CommandBase {
       m_outtake = subsystem;
       addRequirements(m_outtake);
   }
-  }
 
   @Override
   public void execute() {
