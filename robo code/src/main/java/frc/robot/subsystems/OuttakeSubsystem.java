@@ -26,7 +26,7 @@ public class OuttakeSubsystem extends SubsystemBase {
     leftMotorSpinner.setInverted(true);
   }
 
-  public void outtakeDrive(double throttle) {
+  public void run(double throttle) {
     leftMotorSpinner.set(ControlMode.PercentOutput, throttle);
     rightMotorSpinner.set(ControlMode.PercentOutput, throttle);
   }
