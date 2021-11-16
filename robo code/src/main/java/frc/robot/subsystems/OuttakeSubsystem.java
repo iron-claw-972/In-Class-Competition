@@ -19,15 +19,13 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.OuttakeConstants;
 
 public class OuttakeSubsystem extends SubsystemBase {
-  TalonSRX leftMotorSpinner = new TalonSRX(OuttakeConstants.kLeftMotorSpinnerPort);
-  TalonSRX rightMotorSpinner = new TalonSRX(OuttakeConstants.kRightMotorSpinnerPort);
+  TalonSRX motorSpinner = new TalonSRX(OuttakeConstants.kMotorSpinnerPort);
 
   public OuttakeSubsystem() {
-    leftMotorSpinner.setInverted(true);
+    motorSpinner.setInverted(true);
   }
 
   public void run(double throttle) {
-    leftMotorSpinner.set(ControlMode.PercentOutput, throttle);
-    rightMotorSpinner.set(ControlMode.PercentOutput, throttle);
-  }
+    motorSpinner.set(ControlMode.PercentOutput, throttle);
+    }
 }
