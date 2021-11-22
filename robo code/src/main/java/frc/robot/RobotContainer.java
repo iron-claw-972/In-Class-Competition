@@ -48,7 +48,10 @@ public class RobotContainer {
 
   private void configureButtonBindings() {
     JoystickButton aButton = new JoystickButton(controller, ButtonConstants.kA);
-    aButton.whenHeld(new OuttakeDrive(new OuttakeSubsystem()));
+    aButton.whenHeld(new OuttakeDrive(new OuttakeSubsystem(), 0.1));
+
+    JoystickButton bButton = new JoystickButton(controller, ButtonConstants.kB);
+    bButton.whenHeld(new OuttakeDrive(new OuttakeSubsystem(), -0.1));
   }
 
   public static double getMotorSpeed(int port) {
