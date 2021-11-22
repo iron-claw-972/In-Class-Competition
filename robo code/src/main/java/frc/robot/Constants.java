@@ -19,12 +19,14 @@ public final class Constants {
   }
 
   public static final class OuttakeConstants {
-    //CHANGE PORTS
-    public static final int kMotorSpinnerPort = 0;
+    //during testing, the port was 9-- CHECK PORTS
+    public static final int kMotorSpinnerPort = 9;
   }
 
   public static final class ButtonConstants {
     //button A (1) is assigned to variable "kA"
     public static final int kA = 1;
+    //button B (2) is assigned to variable "kB"
+    public static final int kB = 2;
   }
 }
