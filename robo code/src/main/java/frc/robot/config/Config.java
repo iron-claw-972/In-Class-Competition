@@ -72,6 +72,7 @@ public final class Config {
     public static final int kLeftJoyAxis = 0;
     public static final int kRightJoyAxis = 1;
     public static final int kA = 1;
+    public static final int kB = 2;
     /** 
      * Generating Trajectories Data
      */

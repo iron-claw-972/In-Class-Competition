@@ -63,7 +63,10 @@ public class RobotContainer {
      */
     private void configureButtonBindings() {
         JoystickButton aButton = new JoystickButton(controller, Config.kA);
-        aButton.whenHeld(new OuttakeDrive(new OuttakeSubsystem()));
+    aButton.whenHeld(new OuttakeDrive(m_outtakeDrive, 0.1));
+
+    JoystickButton bButton = new JoystickButton(controller, Config.kB);
+    bButton.whenHeld(new OuttakeDrive(m_outtakeDrive, -0.1));
     }
     
     /**
