@@ -20,11 +20,11 @@ public final class Constants {
 
   public static final class OuttakeConstants {
     //CHANGE PORTS
-    public static final int kMotorSpinnerPort = 0;
+    public static final int kMotorSpinnerPort = 9;
   }
 
   public static final class ButtonConstants {
     //button A (1) is assigned to variable "kA"
-    public static final int kA = 1;
+    public static final int kA = 3;
   }
 }
