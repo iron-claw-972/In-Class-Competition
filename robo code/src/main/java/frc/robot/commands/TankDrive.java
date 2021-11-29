@@ -9,13 +9,13 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
-import frc.robot.subsystems.DriveSubsystem;
-import frc.robot.Constants.DriveConstants;
+import frc.robot.config.Config;
+import frc.robot.subsystems.DriveBase;
 
 public class TankDrive extends CommandBase {
-  private final DriveSubsystem m_drive;
+  private final DriveBase m_drive;
 
-  public TankDrive(DriveSubsystem subsystem) {
+  public TankDrive(DriveBase subsystem) {
     m_drive = subsystem;
     addRequirements(m_drive);
   }
@@ -23,7 +23,7 @@ public class TankDrive extends CommandBase {
   @Override
   public void execute() {
     m_drive.tankDrive(
-      RobotContainer.getMotorSpeed(DriveConstants.kLeftJoyAxis), 
-      RobotContainer.getMotorSpeed(DriveConstants.kRightJoyAxis));
+      RobotContainer.getMotorSpeed(Config.kLeftJoyAxis), 
+      RobotContainer.getMotorSpeed(Config.kRightJoyAxis));
     }
 }

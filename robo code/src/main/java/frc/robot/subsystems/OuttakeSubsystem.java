@@ -7,19 +7,15 @@
 
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.TalonFX;
-import com.ctre.phoenix.motorcontrol.can.VictorSPX;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-import com.revrobotics.CANSparkMax;
 
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
-import frc.robot.Constants.OuttakeConstants;
+import frc.robot.config.Config;
 
 public class OuttakeSubsystem extends SubsystemBase {
-  TalonSRX motorSpinner = new TalonSRX(OuttakeConstants.kMotorSpinnerPort);
+  TalonSRX motorSpinner = new TalonSRX(Config.kMotorSpinnerPort);
 
   public OuttakeSubsystem() {
     motorSpinner.setInverted(true);
@@ -27,5 +23,5 @@ public class OuttakeSubsystem extends SubsystemBase {
 
   public void run(double throttle) {
     motorSpinner.set(ControlMode.PercentOutput, throttle);
-    }
+  }
 }

@@ -9,8 +9,6 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.OuttakeSubsystem;
-import frc.robot.RobotContainer;
-import frc.robot.Constants.OuttakeConstants;
 
 public class OuttakeDrive extends CommandBase {
   private final OuttakeSubsystem m_outtake;

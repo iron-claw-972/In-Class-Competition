@@ -8,14 +8,15 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.subsystems.DriveBase;
 import frc.robot.RobotContainer;
-import frc.robot.Constants.DriveConstants;
+import frc.robot.config.Config;
+
 
 public class ArcadeDrive extends CommandBase {
-  private final DriveSubsystem m_drive;
+  private final DriveBase m_drive;
 
-  public ArcadeDrive(DriveSubsystem subsystem) {
+  public ArcadeDrive(DriveBase subsystem) {
     m_drive = subsystem;
     addRequirements(m_drive);
   }
@@ -23,7 +24,7 @@ public class ArcadeDrive extends CommandBase {
   @Override
   public void execute() {
     m_drive.arcadeDrive(
-      RobotContainer.getMotorSpeed(DriveConstants.kLeftJoyAxis), 
-      RobotContainer.getMotorSpeed(DriveConstants.kRightJoyAxis));
+      RobotContainer.getMotorSpeed(Config.kLeftJoyAxis), 
+      RobotContainer.getMotorSpeed(Config.kRightJoyAxis));
   }
 }
