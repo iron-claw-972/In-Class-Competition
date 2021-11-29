@@ -12,15 +12,17 @@ import frc.robot.subsystems.OuttakeSubsystem;
 
 public class OuttakeDrive extends CommandBase {
   private final OuttakeSubsystem m_outtake;
+  private double power;
 
-  public OuttakeDrive(OuttakeSubsystem subsystem) {
+  public OuttakeDrive(OuttakeSubsystem subsystem, double powaah) {
       m_outtake = subsystem;
       addRequirements(m_outtake);
+      power = powaaah;
   }
 
   @Override
   public void execute() {
-    m_outtake.run(.1);
+    m_outtake.run(power);
   }
 
   @Override
