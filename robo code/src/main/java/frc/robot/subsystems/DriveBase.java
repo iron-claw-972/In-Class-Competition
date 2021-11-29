@@ -94,8 +94,8 @@ public class DriveBase extends SubsystemBase {
         //leftSlave.configFactoryDefault();
         rightMaster.configFactoryDefault();
 
-        leftSlave.follow(leftMaster);
-        rightSlave.follow(rightMaster);
+        //leftSlave.follow(leftMaster);
+        //rightSlave.follow(rightMaster);
 
         TalonSRXConfiguration talonConfig = new TalonSRXConfiguration(); 
 

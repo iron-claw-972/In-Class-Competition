@@ -23,10 +23,10 @@ import edu.wpi.first.wpilibj.trajectory.constraint.TrajectoryConstraint;
 public final class Config {
 
     /** Drivetrain Motor Data */
-    public static int LEFT_MASTER = 1;
-    public static int RIGHT_MASTER = 2;
-    public static int LEFT_SLAVE = 3;
-    public static int RIGHT_SLAVE = 4;
+    public static int LEFT_MASTER = 18;
+    public static int RIGHT_MASTER = 15;
+    public static int LEFT_SLAVE = 14;
+    public static int RIGHT_SLAVE = 1;
 
     
     /** Drivetrain inversions */
@@ -70,7 +70,7 @@ public final class Config {
     public static final int kControllerPort = 0;
 
     public static final int kLeftJoyAxis = 0;
-    public static final int kRightJoyAxis = 0;
+    public static final int kRightJoyAxis = 1;
     public static final int kA = 1;
     /** 
      * Generating Trajectories Data
