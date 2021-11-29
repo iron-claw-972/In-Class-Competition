@@ -48,7 +48,12 @@ public class RobotContainer {
     public RobotContainer() {
         // Configure the button bindings
         configureButtonBindings();
+        m_robotDrive.setDefaultCommand(
+            new ArcadeDrive(m_robotDrive)
+        );
     }
+    
+    
 
     /**
      * Use this method to define your button->command mappings. Buttons can be
