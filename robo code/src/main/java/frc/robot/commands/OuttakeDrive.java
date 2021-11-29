@@ -14,18 +14,15 @@ import frc.robot.Constants.OuttakeConstants;
 
 public class OuttakeDrive extends CommandBase {
   private final OuttakeSubsystem m_outtake;
-  //might have to add "final"
-  private double power;
 
-  public OuttakeDrive(OuttakeSubsystem subsystem, double powaaah) {
+  public OuttakeDrive(OuttakeSubsystem subsystem) {
       m_outtake = subsystem;
       addRequirements(m_outtake);
-      power = powaaah;
   }
 
   @Override
   public void execute() {
-    m_outtake.run(power);
+    m_outtake.run(.1);
   }
 
   @Override
