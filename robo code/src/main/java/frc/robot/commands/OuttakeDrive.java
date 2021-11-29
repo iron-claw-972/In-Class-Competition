@@ -14,7 +14,7 @@ public class OuttakeDrive extends CommandBase {
   private final OuttakeSubsystem m_outtake;
   private double power;
 
-  public OuttakeDrive(OuttakeSubsystem subsystem, double powaah) {
+  public OuttakeDrive(OuttakeSubsystem subsystem, double powaaah) {
       m_outtake = subsystem;
       addRequirements(m_outtake);
       power = powaaah;

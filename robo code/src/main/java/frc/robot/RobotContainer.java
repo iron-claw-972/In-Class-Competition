@@ -39,6 +39,7 @@ import frc.robot.subsystems.DriveBase;
 public class RobotContainer {
     // The robot's subsystems and commands are defined here...
     private final DriveBase m_robotDrive = new DriveBase();
+    private final OuttakeSubsystem m_outtakeDrive = new OuttakeSubsystem();
 
     /**
      * The container for the robot. Contains subsystems, OI devices, and commands.
