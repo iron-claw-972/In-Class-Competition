@@ -53,7 +53,7 @@ public final class Config {
     // Diameter of wheel & ticksPerRevolution used to convert meters into encoder ticks
     public static double drivetrainWheelDiameter = 0.0762; // 6 inches in meters
     public static double ticksPerRevolution = 2048;
-    public static final int kMotorSpinnerPort = 0;
+    public static final int kMotorSpinnerPort = 8;
     /** 
      * Characterization data
      */
