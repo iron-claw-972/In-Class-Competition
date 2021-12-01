@@ -40,7 +40,7 @@ public class RobotContainer {
     // The robot's subsystems and commands are defined here...
     private final DriveBase m_robotDrive = new DriveBase();
     private final OuttakeSubsystem m_outtakeDrive = new OuttakeSubsystem();
-
+    
     /**
      * The container for the robot. Contains subsystems, OI devices, and commands.
      */
@@ -69,8 +69,8 @@ public class RobotContainer {
         JoystickButton bButton = new JoystickButton(controller, Config.kB);
         bButton.whenHeld(new OuttakeDrive(m_outtakeDrive, -0.3));
 
-        //JoystickButton yButton = new JoystickButton(controller, Config.kY);
-        //yButton.toggleWhenPressed();
+        JoystickButton yButton = new JoystickButton(controller, Config.kY);
+        yButton.toggleWhenPressed(new RunCommand(() -> m_robotDrive.toggleInverted()));
     }
     
     /**
