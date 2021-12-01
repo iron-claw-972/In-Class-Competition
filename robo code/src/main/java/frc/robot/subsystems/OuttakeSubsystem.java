@@ -18,7 +18,7 @@ public class OuttakeSubsystem extends SubsystemBase {
   TalonSRX motorSpinner = new TalonSRX(Config.kMotorSpinnerPort);
 
   public OuttakeSubsystem() {
-    motorSpinner.setInverted(true);
+    motorSpinner.setInverted(false);
   }
 
   public void run(double throttle) {
