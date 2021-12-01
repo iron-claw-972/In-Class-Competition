@@ -12,18 +12,6 @@ import frc.robot.RobotContainer;
 import frc.robot.config.Config;
 import frc.robot.subsystems.DriveBase;
 
-public class TankDrive extends CommandBase {
-  private final DriveBase m_drive;
+public class Inverter extends CommandBase {
 
-  public TankDrive(DriveBase subsystem) {
-    m_drive = subsystem;
-    addRequirements(m_drive);
-  }
-
-  @Override
-  public void execute() {
-    m_drive.tankDrive(
-      RobotContainer.getMotorSpeed(Config.kLeftJoyAxis), 
-      RobotContainer.getMotorSpeed(Config.kRightJoyAxis));
-    }
 }
