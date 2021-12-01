@@ -23,8 +23,8 @@ import edu.wpi.first.wpilibj.trajectory.constraint.TrajectoryConstraint;
 public final class Config {
 
     /** Drivetrain Motor Data */
-    public static int LEFT_MASTER = 18;
-    public static int RIGHT_MASTER = 15;
+    public static int LEFT_MASTER = 1;
+    public static int RIGHT_MASTER = 2;
     public static int LEFT_SLAVE = 14;
     public static int RIGHT_SLAVE = 1;
 
@@ -53,7 +53,7 @@ public final class Config {
     // Diameter of wheel & ticksPerRevolution used to convert meters into encoder ticks
     public static double drivetrainWheelDiameter = 0.0762; // 6 inches in meters
     public static double ticksPerRevolution = 2048;
-    public static final int kMotorSpinnerPort = 8;
+    public static final int kMotorSpinnerPort = 9;
     /** 
      * Characterization data
      */
@@ -75,6 +75,7 @@ public final class Config {
     //button bindings
     public static final int kA = 1;
     public static final int kB = 2;
+    public static final int kY = 3;
     /** 
      * Generating Trajectories Data
      */
