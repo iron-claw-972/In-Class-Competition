@@ -44,6 +44,7 @@ public class DriveBase extends SubsystemBase {
     private double prevTime = 0;
     private double prevLeftVelocity = 0;
     private double prevRightVelocity = 0;
+    private int inverted = 1;
 
     // NetworkTable Values
     private NetworkTableEntry xOdometry, yOdometry, rotOdometry;
@@ -145,14 +146,7 @@ public class DriveBase extends SubsystemBase {
 
     //inverts the motors direction
     public void toggleInverted() {
-        if(Config.INVERT_LEFT_MASTER == false && Config.INVERT_RIGHT_MASTER == false) {
-            Config.INVERT_LEFT_MASTER = true;
-            Config.INVERT_RIGHT_MASTER = true;
-        }
-        else{
-            Config.INVERT_LEFT_MASTER = false;
-            Config.INVERT_RIGHT_MASTER = false;
-        }
+        inverted = -inverted;
     }
 
     @Override
@@ -202,8 +196,8 @@ public class DriveBase extends SubsystemBase {
     * @param turn the commanded turn rotation
     */
    public void arcadeDrive(double throttle, double turn) {
-     leftMaster.set(ControlMode.PercentOutput, throttle - turn * 0.2f);
-     rightMaster.set(ControlMode.PercentOutput, throttle + turn * 0.2f);
+     leftMaster.set(ControlMode.PercentOutput, inverted * (throttle - turn * 0.2f));
+     rightMaster.set(ControlMode.PercentOutput, inverted * (throttle + turn * 0.2f));
    }
     /**
      * This method will return the heading from odometry
