@@ -146,7 +146,8 @@ public class DriveBase extends SubsystemBase {
 
     //inverts the motors direction
     public void toggleInverted() {
-        inverted = -inverted;
+        inverted = -1 * inverted;
+        System.out.println(inverted);
     }
 
     @Override

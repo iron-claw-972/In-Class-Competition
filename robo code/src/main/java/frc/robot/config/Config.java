@@ -75,7 +75,7 @@ public final class Config {
     //button bindings
     public static final int kA = 1;
     public static final int kB = 2;
-    public static final int kY = 3;
+    public static final int kY = 4;
     /** 
      * Generating Trajectories Data
      */
