@@ -35,7 +35,6 @@ public class DriveBase extends SubsystemBase {
     private boolean isDrivingForward = true;
 
     private WPI_TalonSRX leftMaster, rightMaster;
-    private BaseMotorController leftSlave, rightSlave;
     private AHRS navx;
     private DifferentialDrive differentialDrive; 
 
@@ -61,8 +60,6 @@ public class DriveBase extends SubsystemBase {
     public DriveBase() {
         leftMaster = new WPI_TalonSRX(Config.LEFT_MASTER);
         rightMaster = new WPI_TalonSRX(Config.RIGHT_MASTER);
-        //leftSlave = new WPI_VictorSPX(Config.LEFT_SLAVE);
-        //rightSlave = new WPI_VictorSPX(Config.RIGHT_SLAVE);
         //pigeon = new PigeonIMU(new WPI_TalonSRX(Config.PIGEON_ID));
         navx = new AHRS(SPI.Port.kMXP);
 
@@ -92,12 +89,8 @@ public class DriveBase extends SubsystemBase {
 
         // Set all talons to factory default values
         leftMaster.configFactoryDefault();
-        //rightMaster.configFactoryDefault();
-        //leftSlave.configFactoryDefault();
         rightMaster.configFactoryDefault();
 
-        //leftSlave.follow(leftMaster);
-        //rightSlave.follow(rightMaster);
 
         TalonSRXConfiguration talonConfig = new TalonSRXConfiguration(); 
 
@@ -123,8 +116,6 @@ public class DriveBase extends SubsystemBase {
         // Invert motor controllers if boolean is true
         leftMaster.setInverted(Config.INVERT_LEFT_MASTER);
         rightMaster.setInverted(Config.INVERT_RIGHT_MASTER);
-        //leftSlave.setInverted(Config.INVERT_LEFT_SLAVE);
-        //rightMaster.setInverted(Config.INVERT_RIGHT_MASTER);
 
         // Invert encoders if boolean is true
         leftMaster.setSensorPhase(Config.INVERT_LEFT_ENCODER);
