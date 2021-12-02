@@ -31,7 +31,7 @@ public final class Config {
     
     /** Drivetrain inversions */
     public static boolean INVERT_LEFT_MASTER = false;
-    public static boolean INVERT_RIGHT_MASTER = false;
+    public static boolean INVERT_RIGHT_MASTER = true;
     public static boolean INVERT_LEFT_SLAVE = false;
     public static boolean INVERT_RIGHT_SLAVE = false;
 
@@ -69,7 +69,7 @@ public final class Config {
 
     public static final int kControllerPort = 0;
 
-    public static final int kLeftJoyAxis = 0;
+    public static final int kLeftJoyAxis = 4;
     public static final int kRightJoyAxis = 1;
 
     //button bindings
