@@ -70,7 +70,7 @@ public class RobotContainer {
         bButton.whenHeld(new OuttakeDrive(m_outtakeDrive, -0.3));
 
         JoystickButton yButton = new JoystickButton(controller, Config.kY);
-        yButton.toggleWhenPressed(new RunCommand(() -> m_robotDrive.toggleInverted()));
+        yButton.whenPressed(new RunCommand(() -> m_robotDrive.toggleInverted()));
     }
     
     /**
