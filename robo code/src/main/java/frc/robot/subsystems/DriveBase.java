@@ -32,8 +32,6 @@ public class DriveBase extends SubsystemBase {
 
     private static DriveBase currentInstance;
 
-    private boolean isDrivingForward = true;
-
     private WPI_TalonSRX leftMaster, rightMaster;
     private BaseMotorController leftSlave, rightSlave;
     private AHRS navx;
@@ -154,12 +152,15 @@ public class DriveBase extends SubsystemBase {
         return CTREUnits.talonPosistionToMeters(rightMaster.getSelectedSensorPosition());
     }
 
+    //inverts the motors direction
     public void toggleInverted() {
-        if(isDrivingForward == true) {
-            isDrivingForward = false;
+        if(Config.INVERT_LEFT_MASTER == false && Config.INVERT_RIGHT_MASTER == false) {
+            Config.INVERT_LEFT_MASTER = true;
+            Config.INVERT_RIGHT_MASTER = true;
         }
         else{
-            isDrivingForward = true;
+            Config.INVERT_LEFT_MASTER = false;
+            Config.INVERT_RIGHT_MASTER = false;
         }
     }
 
