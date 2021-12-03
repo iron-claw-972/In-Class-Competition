@@ -82,7 +82,7 @@ public class RobotContainer {
         // Example trajectory - Drive forward 1 meter
         return new SequentialCommandGroup(
         
-            new RunCommand(() -> m_robotDrive.tankDrive(0.5, 0.5)).withTimeout(1)
+            new RunCommand(() -> m_robotDrive.tankDrive(0.1, 0.1)).withTimeout(0.5)
         
         
           );
