@@ -44,10 +44,22 @@ public class DriveBase extends SubsystemBase {
     private double prevTime = 0;
     private double prevLeftVelocity = 0;
     private double prevRightVelocity = 0;
-    private int inverted = 1;
+    private double speedFactor = 1;
+    private boolean changeSpeed = false;
 
     // NetworkTable Values
     private NetworkTableEntry xOdometry, yOdometry, rotOdometry;
+
+    public void speedChanger() {
+        if(changeSpeed == true) {
+            changeSpeed = false;
+            speedFactor = speedFactor * 2;
+        }
+        else if(changeSpeed == false) {
+            changeSpeed = true;
+            speedFactor = speedFactor * .5;
+        }
+    }
 
     public static DriveBase getInstance() {
         if (currentInstance == null) {
@@ -193,8 +205,8 @@ public class DriveBase extends SubsystemBase {
     * @param turn the commanded turn rotation
     */
    public void arcadeDrive(double throttle, double turn) {
-     leftMaster.set(ControlMode.PercentOutput, (throttle - turn * 0.2f));
-     rightMaster.set(ControlMode.PercentOutput, (throttle + turn * 0.2f));
+     leftMaster.set(ControlMode.PercentOutput, ((throttle * speedFactor) - turn * 0.2f));
+     rightMaster.set(ControlMode.PercentOutput, ((throttle * speedFactor) + turn * 0.2f));
    }
     /**
      * This method will return the heading from odometry
