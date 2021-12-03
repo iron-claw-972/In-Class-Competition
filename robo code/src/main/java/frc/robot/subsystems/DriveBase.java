@@ -205,8 +205,8 @@ public class DriveBase extends SubsystemBase {
     * @param turn the commanded turn rotation
     */
    public void arcadeDrive(double throttle, double turn) {
-     leftMaster.set(ControlMode.PercentOutput, ((throttle * speedFactor) - turn * 0.2f));
-     rightMaster.set(ControlMode.PercentOutput, ((throttle * speedFactor) + turn * 0.2f));
+     leftMaster.set(ControlMode.PercentOutput, (throttle - turn * 0.2f));
+     rightMaster.set(ControlMode.PercentOutput, (throttle + turn * 0.2f));
    }
     /**
      * This method will return the heading from odometry
