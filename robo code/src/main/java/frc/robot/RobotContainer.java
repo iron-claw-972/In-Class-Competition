@@ -80,15 +80,17 @@ public class RobotContainer {
      */
     public Command getAutonomousCommand() {
         // Example trajectory - Drive forward 1 meter
-        Trajectory trajectory1 = TrajectoryGenerator.generateTrajectory(List.of(
-            new Pose2d(),
-            new Pose2d(1, 0, Rotation2d.fromDegrees(0))),
-            getConfig(0, 0, false));
-            RamseteCommandMerge ramsete1 = new RamseteCommandMerge(trajectory1, "ExampleTrajectory-DriveForward");        
         return new SequentialCommandGroup(
-            resetOdometry(trajectory1),
-            ramsete1
-        );
+        
+            new RunCommand(() -> m_robotDrive.tankDrive(-0.1, -0.1)),
+            m_robotDrive).withTimeout(1);
+        
+        
+          );
+        
+            
+        
+          
     }
     public static double getMotorSpeed(int port) {
         // get a joystick axis

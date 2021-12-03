@@ -71,6 +71,7 @@ public final class Config {
 
     public static final int kLeftJoyAxis = 4;
     public static final int kRightJoyAxis = 1;
+    public static final int kTriggerAxis = 3;
 
     //button bindings
     public static final int kA = 1;

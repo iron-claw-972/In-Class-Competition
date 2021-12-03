@@ -50,22 +50,22 @@ public class DriveBase extends SubsystemBase {
     // NetworkTable Values
     private NetworkTableEntry xOdometry, yOdometry, rotOdometry;
 
-    public void speedChanger() {
-        if(changeSpeed == true) {
-            changeSpeed = false;
-            speedFactor = speedFactor * 2;
-        }
-        else if(changeSpeed == false) {
-            changeSpeed = true;
-            speedFactor = speedFactor * .5;
-        }
-    }
-
     public static DriveBase getInstance() {
         if (currentInstance == null) {
             currentInstance = new DriveBase();
         }
         return currentInstance;
+    }
+
+    public void speedChanger() {
+        if(changeSpeed == true) {
+            changeSpeed = false;
+            speedFactor = 1;
+        }
+        else if(changeSpeed == false) {
+            changeSpeed = true;
+            speedFactor = .1;
+        }
     }
 
     public DriveBase() {
