@@ -82,7 +82,7 @@ public class RobotContainer {
         // Example trajectory - Drive forward 1 meter
         return new SequentialCommandGroup(
         
-            new RunCommand(() -> m_robotDrive.tankDrive(0.1, 0.1)).withTimeout(0.5)
+            new RunCommand(() -> m_robotDrive.tankDrive(-0.075, -0.075))
         
         
           );
@@ -94,11 +94,10 @@ public class RobotContainer {
     public static double getMotorSpeed(int port) {
         // get a joystick axis
         return controller.getRawAxis(port);
-    }
+    }              
     /**
      * Get Config will return a TrajectoryConfig object needed to generate trajectories
-     * 
-     * If you want to add extra constraints its important to create a new 
+     *           to add extra constraints its important to create a new 
      * TrajectoryConfig object for them.
      * 
      * For the same reason its important to set the startVelocity, endVelocity and isReversed
